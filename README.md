@@ -45,11 +45,11 @@ C:\
 ```
 
 ## TODO
-[X] Create the image
-[X] Create a script to fetch and build aseprite
-[X] Use ~~nanoserver~~ powershell image, as the .NET SDK is not needed (nanoserver does not contain powershell, but it is mandatory!)
-[X] Parameterize all the paths
-[X] Aseprite version must be selectable from parameter - at least latest release and dev (as selecting a too old version will introduce problems with the dependencies)
-[ ] Add a cli file editor to the image (```choco install nano```) - _nano does not run well in a container, see: https://github.com/moby/moby/issues/8755_
-[ ] Add a cli file manager to the image (```choco install mc```)
-[ ] Clean up after/before build
+- [x] Create the image
+- [x] Create a script to fetch and build aseprite
+- [x] Use ~~nanoserver~~ powershell image, as the .NET SDK is not needed (nanoserver does not contain powershell, but it is mandatory!)
+- [x] Parameterize all the paths
+- [x] Aseprite version must be selectable from parameter - at least latest release and dev (as selecting a too old version will introduce problems with the dependencies)
+- [ ] Add a cli file editor to the image (```choco install nano```) - _nano does - not run well in a container, see: https://github.com/moby/moby/issues/8755_
+- [ ] Add a cli file manager to the image (```choco install mc```)
+- [ ] Clean up after/before build
