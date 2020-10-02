@@ -1,6 +1,6 @@
 ## Introduction
-Docker image for building Aseprite for Windows x64
-It can be used to build Aseprite then exit, or as a build environment.
+Docker image for building [Aseprite](https://github.com/aseprite/aseprite) for Windows x64
+It can be used to build Aseprite then exit, or as a standalone build environment.
 
 ## Build the image
 ```cmd
@@ -50,6 +50,6 @@ C:\
 - [x] Use ~~nanoserver~~ powershell image, as the .NET SDK is not needed (nanoserver does not contain powershell, but it is mandatory!)
 - [x] Parameterize all the paths
 - [x] Aseprite version must be selectable from parameter - at least latest release and dev (as selecting a too old version will introduce problems with the dependencies)
-- [ ] Add a cli file editor to the image (```choco install nano```) - _nano does - not run well in a container, see: https://github.com/moby/moby/issues/8755_
+- [ ] Add a cli file editor to the image (```choco install nano```) - _nano does not run well in a container, see: https://github.com/moby/moby/issues/8755_
 - [ ] Add a cli file manager to the image (```choco install mc```)
-- [ ] Clean up after/before build
+- [ ] Clean up after/before build AND/OR check if the repo is cloned, and try to pull the latest changes
