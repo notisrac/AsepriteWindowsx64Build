@@ -2,7 +2,6 @@
 
 # Use the latest Windows Server Core image with .NET Framework 4.8.
 # FROM mcr.microsoft.com/dotnet/framework/sdk:4.8-windowsservercore-ltsc2019
-# FROM mcr.microsoft.com/windows/nanoserver:1909
 FROM mcr.microsoft.com/powershell:latest
 
 # Restore the default Windows shell for correct batch processing.
@@ -42,10 +41,12 @@ RUN choco install -y git
 RUN choco install -y ninja
 
 # Copy the startup batch file.
-COPY assets\run.bat ${ASEPRITE_TEMP}\
+# COPY assets\run.bat ${ASEPRITE_TEMP}\
+ADD https://raw.githubusercontent.com/notisrac/AsepriteWindowsx64Build/master/assets/run.bat ${ASEPRITE_TEMP}\run.bat
 
 # Copy our build script.
-COPY assets\build.ps1 ${ASEPRITE_TOOLS}\
+# COPY assets\build.ps1 ${ASEPRITE_TOOLS}\
+ADD https://raw.githubusercontent.com/notisrac/AsepriteWindowsx64Build/master/assets/build.ps1 ${ASEPRITE_TOOLS}\build.ps1
 
 # create the distribution folder, and make it a mount point
 RUN mkdir %ASEPRITE_DIST%
